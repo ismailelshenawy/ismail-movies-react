@@ -9,6 +9,8 @@ import NetWorks from "./Compantes/NetWorks/NetWorks";
 // import axios from "axios";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MoviesContextProvider from "./Compantes/MovieContext/MovieContext";
+import Search from './Compantes/Search/Search';
 
 
 function App() {
@@ -20,18 +22,21 @@ function App() {
 
   return (
     <>
-      <Nevbar />
-   
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Home" element={<Home />} />
-        <Route path="Movies" element={<Movies />} />
-        <Route path="Tvshow" element={<Tvshow />} />
-        <Route path="People" element={<People />} />
-        <Route path="About" element={<About />} />
-        <Route path="NetWorks" element={<NetWorks />} />
-        <Route path="*" element={<h1>not found</h1>} />
-      </Routes>
+      <MoviesContextProvider>
+        <Nevbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="Movies" element={<Movies />} />
+          <Route path="Tvshow" element={<Tvshow />} />
+          <Route path="People" element={<People />} />
+          <Route path="About" element={<About />} />
+          <Route path="NetWorks" element={<NetWorks />} />
+          <Route path="*" element={<h1>not found</h1>} />
+        </Routes>
+        <Search/>
+      </MoviesContextProvider>
     </>
   );
 }

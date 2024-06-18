@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-
+import { MoviesContext } from "../MovieContext/MovieContext";
 import Card from "./Card";
 import MoviesContextProvider from "../MovieContext/MovieContext";
 
-
 export default function Home() {
+  const filmList = useContext(MoviesContext);
 
   return (
     <>
@@ -12,9 +12,18 @@ export default function Home() {
         <h2>treading movies to watch now</h2>
         <h6>most watch movies by day</h6>
       </div>
-      <MoviesContextProvider>
-        <Card />
-      </MoviesContextProvider>
+      <div className=" container">
+        <div className=" row">
+          {filmList &&
+            filmList.map((film) => (
+              <Card
+                key={film.id}
+                titel={film.original_title}
+                image={film.poster_path}
+              />
+            ))}
+        </div>
+      </div>
     </>
   );
 }

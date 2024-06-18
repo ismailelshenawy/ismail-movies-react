@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Nevbar() {
+  const [word, setWord] = useState("ismail");
+
+  const onChangeSearch = (event) => {
+    console.log(event.target.value);
+ 
+      setWord(event.target.value);
+   console.log(setWord);
+  };
+  // };
   return (
     <nav className="navbar navbar-expand-lg  navbar-bg text-color-1 ">
       <div className="container-fluid">
@@ -80,9 +89,10 @@ export default function Nevbar() {
           {/* the part of rigth */}
           <form className="d-flex align-items-center" role="search">
             <input
-              className="form-control me-2"
+              onChange={(event) => onChangeSearch(event)}
+              className="form-control me-2 "
               type="search"
-              placeholder="Search"
+              placeholder="Enter your movei name"
               aria-label="Search"
             />
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
