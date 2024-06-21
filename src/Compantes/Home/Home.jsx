@@ -20,6 +20,7 @@ export default function Home() {
                 key={film.id}
                 titel={film.original_title}
                 image={film.poster_path}
+                id={film.id}
               />
             ))}
         </div>

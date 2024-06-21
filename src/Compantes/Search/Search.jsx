@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import Card from './../Home/Card';
 
 export default function Search() {
-    const [wordSearch, setWordSearch] = useState("spider");
-    const[searchList , setSearchList] = useState([])
+  const [wordSearch, setWordSearch] = useState("spider");
+  const [searchList, setSearchList] = useState([]);
+
 
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=7a1c19ea3c361a4d3cc53eb70ef8298c&query=ولاد"
+        "https://api.themoviedb.org/3/search/movie?api_key=7a1c19ea3c361a4d3cc53eb70ef8298c&query=spider"
       )
       .then((resp) => {
           console.log(resp.data.results);
@@ -33,6 +34,7 @@ export default function Search() {
                 key={search.id}
                 titel={search.title}
                 image={search.poster_path}
+                id={search.id}
               />
             ))}
         </div>

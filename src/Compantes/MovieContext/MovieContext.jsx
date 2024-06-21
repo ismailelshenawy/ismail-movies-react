@@ -8,6 +8,10 @@ export const imagePath = "https://image.tmdb.org/t/p/w500/";
 
 const MoviesContextProvider = (props) => {
   const [moviesList, setMoviesList] = useState([]);
+  const [searchMoviesList, setSearchMoviesList] = useState([]);
+ 
+ 
+
   useEffect(() => {
     axios
       .get(

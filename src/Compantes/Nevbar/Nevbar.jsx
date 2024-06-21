@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { MoviesContext } from "../MovieContext/MovieContext";
 export default function Nevbar() {
-  const [word, setWord] = useState("ismail");
-
   const onChangeSearch = (event) => {
     console.log(event.target.value);
- 
-      setWord(event.target.value);
-   console.log(setWord);
   };
   // };
   return (
@@ -18,7 +13,7 @@ export default function Nevbar() {
           Noxe
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler bg-light"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -87,10 +82,10 @@ export default function Nevbar() {
             </li>
           </ul>
           {/* the part of rigth */}
-          <form className="d-flex align-items-center" role="search">
+          <form className="d-flex align-items-center " role="search">
             <input
               onChange={(event) => onChangeSearch(event)}
-              className="form-control me-2 "
+              className="form-control me-2 bg-warning "
               type="search"
               placeholder="Enter your movei name"
               aria-label="Search"
