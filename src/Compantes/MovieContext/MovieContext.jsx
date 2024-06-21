@@ -7,8 +7,13 @@ export const imagePath = "https://image.tmdb.org/t/p/w500/";
 
 
 const MoviesContextProvider = (props) => {
+  const [searchWordMovies, setSearchWordMovies] = useState("");
+
   const [moviesList, setMoviesList] = useState([]);
   const [searchMoviesList, setSearchMoviesList] = useState([]);
+  function getWord(word) {
+    setSearchWordMovies(word);
+  }
  
  
 
@@ -26,7 +31,7 @@ const MoviesContextProvider = (props) => {
   }, []);
 
   return (
-    <MoviesContext.Provider value={moviesList}>
+    <MoviesContext.Provider value={{ moviesList, searchWordMovies, getWord }}>
       {props.children}
     </MoviesContext.Provider>
   );

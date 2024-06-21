@@ -4,7 +4,7 @@ import Card from "./Card";
 import MoviesContextProvider from "../MovieContext/MovieContext";
 
 export default function Home() {
-  const filmList = useContext(MoviesContext);
+  const {moviesList} = useContext(MoviesContext);
 
   return (
     <>
@@ -14,8 +14,8 @@ export default function Home() {
       </div>
       <div className=" container">
         <div className=" row">
-          {filmList &&
-            filmList.map((film) => (
+          {moviesList &&
+            moviesList.map((film) => (
               <Card
                 key={film.id}
                 titel={film.original_title}

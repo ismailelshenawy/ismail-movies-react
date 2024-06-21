@@ -1,9 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MoviesContext } from "../MovieContext/MovieContext";
+
 export default function Nevbar() {
+  const { searchWordMovies, getWord } = useContext(MoviesContext);
+  const navigate = useNavigate();
+
+
   const onChangeSearch = (event) => {
+    
     console.log(event.target.value);
+    getWord(event.target.value);
+    navigate("Search");
   };
   // };
   return (

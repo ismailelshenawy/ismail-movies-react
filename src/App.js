@@ -25,11 +25,10 @@ function App() {
           <Route path="About" element={<About />} />
           <Route path="NetWorks" element={<NetWorks />} />
           <Route path="/Home/:id" element={<SingelMovie />} />
-          <Route path=":id" element={<SingelMovie />} />
+          <Route path="/Search/:id" element={<SingelMovie />} />
           <Route path="*" element={<h1>not found</h1>} />
-          {/* <Route path="Search" element={<Search />} /> */}
+          <Route path="Search" element={<Search />} />
         </Routes>
-        <Search/>
       </MoviesContextProvider>
     </>
   );
