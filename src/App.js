@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MoviesContextProvider from "./Compantes/MovieContext/MovieContext";
 import Search from './Compantes/Search/Search';
 import SingelMovie from './Compantes/SingelMovie/SingelMovie';
+import Logging from "./Compantes/logging/Logging";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Search/:id" element={<SingelMovie />} />
           <Route path="*" element={<h1>not found</h1>} />
           <Route path="Search" element={<Search />} />
+          <Route path="logging" element={<Logging />} />
         </Routes>
       </MoviesContextProvider>
     </>

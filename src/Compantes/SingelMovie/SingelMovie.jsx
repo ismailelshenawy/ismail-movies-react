@@ -33,7 +33,7 @@ export default function SingelMovie() {
             <h4>{film.tagline}</h4>
             {film.genres &&
               film.genres.map((manyList) => (
-                <button className="but m-2">{manyList.name}</button>
+                <button className="but m-2 btn-color">{manyList.name}</button>
               ))}
             <h4>Vote:{film.vote_average}</h4>
             <h4>Vote count:{film.vote_count}</h4>

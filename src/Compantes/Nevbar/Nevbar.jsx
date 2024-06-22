@@ -6,9 +6,7 @@ export default function Nevbar() {
   const { searchWordMovies, getWord } = useContext(MoviesContext);
   const navigate = useNavigate();
 
-
   const onChangeSearch = (event) => {
-    
     console.log(event.target.value);
     getWord(event.target.value);
     navigate("Search");
@@ -107,6 +105,7 @@ export default function Nevbar() {
             </ul>
 
             <button
+              onClick={() => navigate("logging")}
               className="btn btn-outline-darak text-color-1"
               type="submit"
             >

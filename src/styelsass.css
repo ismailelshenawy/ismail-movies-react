@@ -2,7 +2,9 @@
 
 * {
   font-family: Montserrat Alternates !important;
-  /* background-color: #24baef !important;
+  background-color: #131722 !important;
+  Color: #fff !important
+    /* background-color: #24baef !important;
   $bgColor: #131722;
   $lightBgColor: #24baef;
   $bgTransparent: rgba(36, 186, 239, .6);
@@ -15,6 +17,7 @@
 body .navbar {
   background-color: #131722 !important;
   font-family: Montserrat Alternates !important;
+  Color: #fff !important
 }
 
 .text-color-1 {
@@ -22,3 +25,25 @@ body .navbar {
 }
 
 /*# sourceMappingURL=styelsass.css.map */
+body {
+  form {
+    width: 70%;
+    margin: auto;
+  }
+
+  input {
+    background-color: aliceblue !important;
+    width: 100%;
+
+  }
+}
+
+.card {
+  border: solid 1px #a8a8a83d !important;
+}
+
+.btn-color {
+  margin-top: 10px;
+  background-color: #24baef !important;
+
+}
