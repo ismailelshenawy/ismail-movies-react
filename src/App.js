@@ -11,6 +11,7 @@ import MoviesContextProvider from "./Compantes/MovieContext/MovieContext";
 import Search from './Compantes/Search/Search';
 import SingelMovie from './Compantes/SingelMovie/SingelMovie';
 import Logging from "./Compantes/logging/Logging";
+import PageMovies from "./Compantes/Pagintin/PageMovies";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="Home" element={<Home />} />
           <Route path="Movies" element={<Movies />} />
-          <Route path="Tvshow" element={<Tvshow />} />
+          {/* <Route path="Tvshow" element={<Tvshow />} /> */}
           <Route path="People" element={<People />} />
           <Route path="About" element={<About />} />
           <Route path="NetWorks" element={<NetWorks />} />
@@ -31,6 +32,7 @@ function App() {
           <Route path="Search" element={<Search />} />
           <Route path="logging" element={<Logging />} />
         </Routes>
+        {/* <PageMovies/> */}
       </MoviesContextProvider>
     </>
   );
