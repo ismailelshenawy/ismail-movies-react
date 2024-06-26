@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Logging() {
-
   return (
     <>
       <div>
@@ -16,9 +15,11 @@ export default function Logging() {
           <input className="d-block" type="text" id="age" />
           <label htmlFor="email">Email:</label>
           <input className="d-block" type="email" id="email" />
-          <label htmlFor="password">Email:</label>
+          <label htmlFor="password">Password:</label>
           <input className="d-block" type="password" id="password" />
-      <button className="btn btn-color  " type="submit">Register</button>
+          <button className="btn btn-color  " type="submit">
+            Register
+          </button>
         </form>
       </div>
     </>
